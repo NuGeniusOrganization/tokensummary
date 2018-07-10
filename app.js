@@ -114,33 +114,6 @@ $(document).ready(function () {
     }
   };
 
-  $.ajax(trans).done(function (response) {
-    // console.log(response);
-
-    response.forEach(function (element) {
-      // console.log(element);
-      $("#id").append("<p>" + element.id + "</p>");
-      $("#amount").append("<p>" + "$" + element.amount + "</p>");
-      $("#notes").append("<p>" + element.notes + "</p>");
-      $("#reason").append("<p>" + element.reason + "</p>");
-      $("#to").append("<p>" + element.to + "</p>");
-      $("#type").append("<p>" + element.type + "</p>");
-
-    })
-
-    let fullDate = new Date()
-    console.log(fullDate);
-    //Thu May 19 2011 17:25:38 GMT+1000 {}
-
-    //convert month to 2 digits
-    let twoDigitMonth = ((fullDate.getMonth().length + 1) === 1) ? (fullDate.getMonth() + 1) : '0' + (fullDate.getMonth() + 1);
-
-    let currentDate = twoDigitMonth + "/" + fullDate.getDate() + "/" + fullDate.getFullYear();
-    console.log(currentDate);
-    $("#time2").append("<h4>" + "as of : " + currentDate + "</h4>");
-    //05/19/2011
-  });
-
   $.ajax(balance).done(function (response2) {
     // console.log(response2);
     $("#id2").append("<p>" + response2.id + "</p>");
@@ -159,5 +132,33 @@ $(document).ready(function () {
 
   }); //AJAX closed
 
+
+  $.ajax(trans).done(function (response) {
+    // console.log(response);
+
+    response.forEach(function (element) {
+      // console.log(element);
+      $("#id").append("<p>" + element.id + "</p>");
+      $("#amount").append("<p>" + "$" + element.amount + "</p>");
+      $("#notes").append("<p>" + element.notes + "</p>");
+      $("#reason").append("<p>" + element.reason + "</p>");
+      $("#to").append("<p>" + element.to + "</p>");
+      $("#type").append("<p>" + element.type + "</p>");
+
+    })
+
+    let fullDate = new Date()
+    console.log(fullDate);
+    $("#time2").append("<h6 class='mt-2'>" + "as of : " + fullDate + "</h6>");
+
+    //Thu May 19 2011 17:25:38 GMT+1000 {}
+
+    //convert month to 2 digits
+    // let twoDigitMonth = ((fullDate.getMonth().length + 1) === 1) ? (fullDate.getMonth() + 1) : '0' + (fullDate.getMonth() + 1);
+    // let currentDate = twoDigitMonth + "/" + fullDate.getDate() + "/" + fullDate.getFullYear();
+    // console.log(currentDate);
+    // $("#time2").append("<h4>" + "as of : " + currentDate + "</h4>");
+    //05/19/2011
+  });
 
 }); //document ready closed
