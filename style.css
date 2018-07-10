@@ -1,3 +1,16 @@
+/* body {
+    background-image: url("assets/images/nubucks@3x.png");
+    background-repeat: no-repeat;
+   
+
+    
+} */
+#logo {
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
 
 .greenBorder {
     border-top: 3px solid #2fabb2;
@@ -15,10 +28,7 @@
    padding-top: 2px;
    
 }
-/* .teal {
-    height: 50px;
-    background-color: #d9dddd;
-} */
+
 
 .white {
     height: 50px;
