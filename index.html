@@ -1,0 +1,105 @@
+<!-- Bootstrap Starter Template -->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Hello, world!</title>
+</head>
+
+<body>
+
+  <!--Container-->
+  <div class="container">
+    <!-- balance heading -->
+
+    <div class="row mt-5 pb-2">
+      <div class="col-3"><h3>Balance</h3></div>
+      <!-- <div class="col-1"></div> -->
+      <div class="col-6"></div>
+      <div class="col-3">
+        <input class="input-field" id="idSearch" type="text" placeholder="Enter ID" />
+        <button id="searchBtn" type="button" class="btn btn-info">Search</button>
+      </div>
+    </div>
+
+    <!-- balance table start-->
+    <table class="table">
+      <thead class="thead-light greenBorder">
+        <tr>
+
+          <th scope="col">ID</th>
+          <th scope="col">Token</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+
+        <tr>
+          <td id="id2"></td>
+          <td id="token"></td>
+        </tr>
+      </thead>
+      <div id="transaction"></div>
+    </table>
+
+
+    <!-- Transaction Heading -->
+    <div class="row mt-5 pb-2">
+      <div class="col-3"><h3>Transaction</h3></div>
+      <div class="col-6"></div>
+      <div class="col-3">
+        <input class="input-field" id="idSearch2" type="text" placeholder="Enter ID" />
+        <button id ="searchBtn2" type="button" class="btn btn-info">Search</button>
+      </div>
+    </div>
+
+    <!-- Transaction Table Start-->
+    <table class="table">
+      <thead class="thead-light greenBorder">
+        <tr>
+          <!-- <th scope ="col" >Date</td> -->
+          <th scope="col">ID</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Reason</th>
+          <th scope="col">To</th>
+          <th scope="col">Type</th>
+        </tr>
+        <tr>
+          <!-- <td id="date"></td> -->
+          
+          <td id="id"></td>
+          <td id="amount"></td>
+          <td id="notes"></td>
+          <td id="reason"></td>
+          <td id="to"></td>
+          <td id="type"></td>
+        </tr>
+      </thead>
+    </table>
+
+  </div>
+  <!--Boostrap Container Closed-->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
+<!-- Basic Form // https://getbootstrap.com/docs/4.0/components/forms/ -->
