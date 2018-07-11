@@ -10,7 +10,11 @@ $(document).ready(function () {
     $("#time").empty();
 
     let search = $("#idSearch").val()
-
+    
+    if(search === "") {
+      $(".message").append("<p style='color: red; display: inline;'>Please enter an ID</p>")
+    
+    } else {
     const balance = {
       async: true,
       crossDomain: true,
@@ -23,24 +27,28 @@ $(document).ready(function () {
 
     $.ajax(balance).done(function (response2) {
       // console.log(response2);
-      $("#id2").append("<p>" + response2.id + "</p>");
-      $("#token").append("<p>" + response2.tokens + "</p>");
-      let fullDate = new Date()
-      console.log(fullDate);
-      //Thu May 19 2011 17:25:38 GMT+1000 {}
+      // $("#id2").append("<p>" + response2.id + "</p>");
+      
+      $("#token").html("<h1 class ='d-inline'>" + response2.tokens + "</h1>");
 
-      //convert month to 2 digits
-      var twoDigitMonth = ((fullDate.getMonth().length + 1) === 1) ? (fullDate.getMonth() + 1) : '0' + (fullDate.getMonth() + 1);
+      // TIME
+      // let fullDate = new Date()
+      // console.log(fullDate);
+      // //Thu May 19 2011 17:25:38 GMT+1000 {}
 
-      var currentDate = twoDigitMonth + "/" + fullDate.getDate() + "/" + fullDate.getFullYear();
-      console.log(currentDate);
-      $("#time").append("<h4>" + "as of : " + currentDate + "</h4>");
-      //19/05/2011
+      // //convert month to 2 digits
+      // var twoDigitMonth = ((fullDate.getMonth().length + 1) === 1) ? (fullDate.getMonth() + 1) : '0' + (fullDate.getMonth() + 1);
+
+      // var currentDate = twoDigitMonth + "/" + fullDate.getDate() + "/" + fullDate.getFullYear();
+      // console.log(currentDate);
+      // $("#time").append("<h4>" + "as of : " + currentDate + "</h4>");
+      // //19/05/2011
 
 
     });
 
-  }); // searchBtn end
+  } // close else statement
+}); // searchBtn end
 
   //searchBtn2 start
   $("#searchBtn2").on("click", function () {
@@ -71,23 +79,27 @@ $(document).ready(function () {
       response.forEach(function (element) {
         // console.log(element);
         $("#id").append("<p>" + element.id + "</p>");
-        $("#amount").append("<p>" + "$" + element.amount + "</p>");
+        $("#amount").append("<p>" + element.amount + "</p>");
         $("#notes").append("<p>" + element.notes + "</p>");
         $("#reason").append("<p>" + element.reason + "</p>");
         $("#to").append("<p>" + element.to + "</p>");
         $("#type").append("<p>" + element.type + "</p>");
       })
+
       let fullDate = new Date()
     console.log(fullDate);
-    //Thu May 19 2011 17:25:38 GMT+1000 {}
+    $("#time2").append("<h6 class='mt-2'>" + "as of : " + fullDate + "</h6>");
+    //   let fullDate = new Date()
+    // console.log(fullDate);
+    // //Thu May 19 2011 17:25:38 GMT+1000 {}
 
-    //convert month to 2 digits
-    let twoDigitMonth = ((fullDate.getMonth().length + 1) === 1) ? (fullDate.getMonth() + 1) : '0' + (fullDate.getMonth() + 1);
+    // //convert month to 2 digits
+    // let twoDigitMonth = ((fullDate.getMonth().length + 1) === 1) ? (fullDate.getMonth() + 1) : '0' + (fullDate.getMonth() + 1);
 
-    let currentDate = twoDigitMonth + "/" + fullDate.getDate() + "/" + fullDate.getFullYear();
-    console.log(currentDate);
-    $("#time2").append("<h4>" + "as of : " + currentDate + "</h4>");
-    //05/19/2011
+    // let currentDate = twoDigitMonth + "/" + fullDate.getDate() + "/" + fullDate.getFullYear();
+    // console.log(currentDate);
+    // $("#time2").append("<h4>" + "as of : " + currentDate + "</h4>");
+    // //05/19/2011
     });
 
   }); // searchBtn2 closed
@@ -118,16 +130,16 @@ $(document).ready(function () {
     // console.log(response2);
     $("#id2").append("<p>" + response2.id + "</p>");
     $("#token").append("<p>" + response2.tokens + "</p>");
-    let fullDate = new Date()
-    console.log(fullDate);
-    //Thu May 19 2011 17:25:38 GMT+1000 {}
+    // let fullDate = new Date()
+    // console.log(fullDate);
+    // //Thu May 19 2011 17:25:38 GMT+1000 {}
 
-    //convert month to 2 digits
-    var twoDigitMonth = ((fullDate.getMonth().length + 1) === 1) ? (fullDate.getMonth() + 1) : '0' + (fullDate.getMonth() + 1);
+    // //convert month to 2 digits
+    // var twoDigitMonth = ((fullDate.getMonth().length + 1) === 1) ? (fullDate.getMonth() + 1) : '0' + (fullDate.getMonth() + 1);
 
-    var currentDate = twoDigitMonth + "/" + fullDate.getDate() + "/" + fullDate.getFullYear();
-    console.log(currentDate);
-    $("#time").append("<h4>" + "as of : " + currentDate + "</h4>");
+    // var currentDate = twoDigitMonth + "/" + fullDate.getDate() + "/" + fullDate.getFullYear();
+    // console.log(currentDate);
+    // $("#time").append("<h4>" + "as of : " + currentDate + "</h4>");
     //19/05/2011
 
   }); //AJAX closed
@@ -139,7 +151,7 @@ $(document).ready(function () {
     response.forEach(function (element) {
       // console.log(element);
       $("#id").append("<p>" + element.id + "</p>");
-      $("#amount").append("<p>" + "$" + element.amount + "</p>");
+      $("#amount").append("<p>" + element.amount + "</p>");
       $("#notes").append("<p>" + element.notes + "</p>");
       $("#reason").append("<p>" + element.reason + "</p>");
       $("#to").append("<p>" + element.to + "</p>");

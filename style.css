@@ -6,14 +6,29 @@
     
 } */
 #logo {
-  height: 120px;
-  margin-left: auto;
-  margin-right: auto;
- 
+  height: 80px;
+  
 }
 
+.footer {
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #e9ecef;
+   color: black;
+   text-align: center;
+}
+
+#logo2 {
+    height: 50px;
+}
+#token {
+    display: inline!important;
+}
 .greenBorder {
-    border-top: 3px solid #2fabb2;
+    border-top: 2px solid #2fabb2;
+    border-bottom: 1px solid #2fabb2
     
 }
 
