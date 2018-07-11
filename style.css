@@ -22,9 +22,29 @@
 
 #logo2 {
     height: 50px;
+    
+}
+
+.centerBalance {
+    margin: auto;
+    width: 17%;
+    
+    padding: 10px;
+    
+}
+
+.nuToken {
+    border: 1px solid #2fabb2;
+    border-radius: 15px;
+    padding: 5px;
+    padding-top:15px;
+}
+.tokenText {
+    margin-bottom:0
 }
 #token {
-    display: inline!important;
+    display: inline-block!important;
+    
 }
 .greenBorder {
     border-top: 2px solid #2fabb2;

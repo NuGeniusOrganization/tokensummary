@@ -29,7 +29,7 @@ $(document).ready(function () {
       // console.log(response2);
       // $("#id2").append("<p>" + response2.id + "</p>");
       
-      $("#token").html("<h1 class ='d-inline'>" + response2.tokens + "</h1>");
+      $("#token").append("<h3>" + response2.tokens + "</h3>");
 
       // TIME
       // let fullDate = new Date()
