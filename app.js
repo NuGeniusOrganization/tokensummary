@@ -149,13 +149,14 @@ $(document).ready(function () {
     // console.log(response);
 
     response.forEach(function (element) {
-      // console.log(element);
+      console.log(element);
       $("#id").append("<p>" + element.id + "</p>");
       $("#amount").append("<p>" + element.amount + "</p>");
       $("#notes").append("<p>" + element.notes + "</p>");
       $("#reason").append("<p>" + element.reason + "</p>");
       $("#to").append("<p>" + element.to + "</p>");
       $("#type").append("<p>" + element.type + "</p>");
+      $("#date").append("<p>" + element.timestamp + "</p>")
 
     })
 
