@@ -18,36 +18,47 @@
   <!--Container-->
   <div class="container">
 
-    
+
     <!-- balance heading -->
 
     <div class="row mb-2 mt-3">
-      <div class="col-12"><img class="d-inline mr-2" id="logo" src="./assets/images/200x200NB.png" alt="nubucks logo"/><h3 class="d-inline nuWalletText">NuWallet</h3></div>
+      <div class="col-12">
+        <img class="d-inline mr-2" id="logo" src="./assets/images/200x200NB.png" alt="nubucks logo" />
+        <h3 class="d-inline nuWalletText">NuWallet</h3>
+      </div>
     </div>
 
-    <div class="centerBalance">
-    <div class="row">
-      <div class="col-12"><h6 class="text-center tokenText">NuToken Balance</h6></div>
-    </div>
-    <div class="row mb-2 mt-3 nuToken">
-        <div class="col-12"><img class=" mr-2" id="logo2" src="./assets/images/197X180NW.png" alt="nubucks logo"/><h3 class="text-center" id="token"></h3></div>
+    <div class="centerBalance clearfix">
+      <div class="row clearfix">
+        <div class="col-12 clearfix">
+          <h6 class="text-center tokenText">NuToken Balance</h6>
+        </div>
       </div>
-    </div> <!--centerBalance End-->
+      <div class="row mb-2 mt-3 nuToken clearfix">
+        <div class="col-12">
+          <img class=" mr-2" id="logo2" src="./assets/images/197X180NW.png" alt="nubucks logo" />
+          <h3 class="text-center mt-2" id="token"></h3>
+        </div>
+      </div>
+    </div>
+    <!--centerBalance End-->
 
     <!-- balance table start-->
-    
-      <!-- <div id="transaction"></div> -->
-   
+
+    <!-- <div id="transaction"></div> -->
+
 
 
     <!-- Transaction Heading -->
     <div class="row mt-2 pb-2 pt-2 mb-2 greenBorder">
-      <div class="col-2"><h3>Transactions</h3></div>
-      <div id ="time2" class="col-7"></div>
+      <div class="col-2">
+        <h3>Transactions</h3>
+      </div>
+      <div id="time2" class="col-7"></div>
       <!-- <div class="col-4"></div> -->
       <div class="d-inline-flex col-3">
         <input class="input-field" id="idSearch2" type="text" placeholder="Enter ID" />
-        <button id ="searchBtn2" type="button" class="btn btn-info">Search</button>
+        <button id="searchBtn2" type="button" class="btn btn-info">Search</button>
       </div>
     </div>
 
@@ -55,16 +66,15 @@
     <table class="table">
       <thead class="thead-light">
         <tr>
-          <th scope ="col" >Transaction Date</td>
-          <th scope="col">ID</th>
-          <th scope="col">Amount</th>
-          <th scope="col">Notes</th>
-          <th scope="col">Reason</th>
-          <th scope="col">To</th>
-          <th scope="col">Type</th>
+            <th scope="col">Transaction Date</th>
+            <th scope="col">ID</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Notes</th>
+            <th scope="col">Reason</th>
+            <th scope="col">To</th>
+            <th scope="col">Type</th>
         </tr>
         <tr>
-         
           <td id="date"></td>
           <td id="id"></td>
           <td id="amount"></td>
@@ -76,32 +86,42 @@
       </thead>
     </table>
 
-   
+
     <!-- Bottom content - MetaMask-->
-  
-   <div class="footer">
-    <div class="row mb-3 mt-2">
-        
-      <div class="col-12"><img class="d-inline" id="logo2" src="./assets/images/foxxxy.png" alt="nubucks logo"/><h3 class="d-inline ml-3">Launch Crypto Wallet</h3></div>
-     
-    </div>
 
-    <div class="row mb-3">
-      <div class="col-12 d-block">
-        <h6 class="d-block">NuWallet is currently using the MetaMask extension for Chrome and Firefox </h6>
+    <div class="footer">
+      <div class="row mb-3 mt-2">
+
+        <div class="col-12">
+          <img class="d-inline" id="logo2" src="./assets/images/foxxxy.png" alt="nubucks logo" />
+          <h3 class="d-inline ml-3">Launch Crypto Wallet</h3>
+        </div>
+
       </div>
-    </div>
 
-    <div class="row mb-3">
+      <div class="row mb-3">
+        <div class="col-12 d-block">
+          <h6 class="d-block">NuWallet is currently using the MetaMask extension for Chrome and Firefox </h6>
+        </div>
+      </div>
+
+      <div class="row mb-3">
         <div class="col-3"></div>
-      <div class="col-6"><a href="https://chrome.google.com/webstore/search/metamask?hl=en" target="_blank"><button  type="button" class="btn btn-light btn-outline-info mr-3">Chrome Extension</button></a><a href="https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/" target="_blank"><button type="button" class="btn btn-light btn-outline-info">FireFox Extension</button></a></div>
-      <div class="col-3"></div>
-    </div>
-  </div>
-  
+        <div class="col-6">
+          <a href="https://chrome.google.com/webstore/search/metamask?hl=en" target="_blank">
+            <button type="button" class="btn btn-light btn-outline-info mr-3">Chrome Extension</button>
+          </a>
+          <a href="https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/" target="_blank">
+            <button type="button" class="btn btn-light btn-outline-info">FireFox Extension</button>
+          </a>
+        </div>
+        <div class="col-3"></div>
+      </div> <!--row closed-->
+    </div> <!--Footer closed-->
 
-  </div>
-  <!--Boostrap Container Closed-->
+
+  </div> <!--Boostrap Container Closed-->
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
