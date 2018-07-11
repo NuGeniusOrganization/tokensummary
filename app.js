@@ -84,6 +84,7 @@ $(document).ready(function () {
         $("#reason").append("<p>" + element.reason + "</p>");
         $("#to").append("<p>" + element.to + "</p>");
         $("#type").append("<p>" + element.type + "</p>");
+        $("#date").append("<p>" + element.timestamp + "</p>")
       })
 
       let fullDate = new Date()
