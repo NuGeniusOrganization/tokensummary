@@ -60,6 +60,7 @@ $(document).ready(function () {
     $("#to").empty();
     $("#type").empty();
     $("#time2").empty();
+    $("#date").empty();
 
     let search = $("#idSearch2").val()
 
