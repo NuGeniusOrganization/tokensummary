@@ -85,8 +85,11 @@ $(document).ready(function () {
         $("#reason").append("<p>" + element.reason + "</p>");
         $("#to").append("<p>" + element.to + "</p>");
         $("#type").append("<p>" + element.type + "</p>");
-        $("#date").append("<p>" + element.timestamp + "</p>")
+        $("#date").append("<p>" + element.date_time + "</p>")
+        
       })
+
+      console.log(element.date_time);
 
       let fullDate = new Date()
     console.log(fullDate);
@@ -158,7 +161,7 @@ $(document).ready(function () {
       $("#reason").append("<p>" + element.reason + "</p>");
       $("#to").append("<p>" + element.to + "</p>");
       $("#type").append("<p>" + element.type + "</p>");
-      $("#date").append("<p>" + element.timestamp + "</p>")
+      $("#date").append("<p>" + element.date_time + "</p>")
 
     })
 
