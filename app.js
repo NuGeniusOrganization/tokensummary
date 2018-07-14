@@ -133,8 +133,10 @@ $(document).ready(function () {
 
   $.ajax(balance).done(function (response2) {
     // console.log(response2);
+   
+    
     $("#id2").append("<p>" + response2.id + "</p>");
-    $("#token").append("<p>" + response2.tokens + "</p>");
+    $("#token").append("<p>" + response2.tokens.toLocaleString() + "</p>");
     // let fullDate = new Date()
     // console.log(fullDate);
     // //Thu May 19 2011 17:25:38 GMT+1000 {}
@@ -156,7 +158,7 @@ $(document).ready(function () {
     response.forEach(function (element) {
       console.log(element);
       $("#id").append("<p>" + element.id + "</p>");
-      $("#amount").append("<p>" + element.amount + "</p>");
+      $("#amount").append("<p>" + element.amount.toLocaleString() + "</p>");
       $("#notes").append("<p>" + element.notes + "</p>");
       $("#reason").append("<p>" + element.reason + "</p>");
       $("#to").append("<p>" + element.to + "</p>");
@@ -164,7 +166,7 @@ $(document).ready(function () {
       $("#date").append("<p>" + element.date_time + "</p>")
 
     })
-
+    
     let fullDate = new Date()
     console.log(fullDate);
     $("#time2").append("<h6 class='mt-2'>" + "as of : " + fullDate + "</h6>");
