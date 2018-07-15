@@ -2,6 +2,20 @@
 $(document).ready(function () {
   console.log("ready!");
 
+  // Function to captilize the first letter of each word
+  function capital_letter(str) 
+{
+    str = str.split(" ");
+
+    for (let i = 0, x = str.length; i < x; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+    return str.join(" ");
+}
+
+// console.log(capital_letter("the world goes on"));
+
   // searchBtn start
   $("#searchBtn").on("click", function () {
 
@@ -84,10 +98,11 @@ $(document).ready(function () {
         $("#notes").append("<p>" + element.notes + "</p>");
         $("#reason").append("<p>" + element.reason + "</p>");
         $("#to").append("<p>" + element.to + "</p>");
-        $("#type").append("<p>" + element.type + "</p>");
+        $("#type").append("<p>" + capital_letter(element.type) + "</p>");
         $("#date").append("<p>" + element.date_time + "</p>")
         
       })
+      console.log(typeOf(element.type));
 
       console.log(element.date_time);
 
@@ -162,7 +177,7 @@ $(document).ready(function () {
       $("#notes").append("<p>" + element.notes + "</p>");
       $("#reason").append("<p>" + element.reason + "</p>");
       $("#to").append("<p>" + element.to + "</p>");
-      $("#type").append("<p>" + element.type + "</p>");
+      $("#type").append("<p>" + capital_letter(element.type) + "</p>");
       $("#date").append("<p>" + element.date_time + "</p>")
 
     })
